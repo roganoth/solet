@@ -1,0 +1,14 @@
+body {
+    background-size: cover;
+}
+
+.gemButton {
+    height: 150px;
+    width: 150px;
+}
+.gemImage {
+    height: 150px;
+    width: 150px;
+    image-orientation: center;
+
+}
