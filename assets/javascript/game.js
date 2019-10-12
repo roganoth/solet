@@ -62,4 +62,20 @@ $("#gemButton4").click(function () {
     $("#actualScore").text(sum);
 });
 
+if (sum === goal) {
+    alert("Congratulations! You've won!");
+    confirm("Would you like to try again?");
+        if (confirm) {
+            start();
+        }
+    wins++;
+}
 
+if (sum > goal) {
+    alert("Sorry, you've lost.");
+    confirm("Would you like to try again?");
+        if (confirm) {
+            start();
+        }
+    losses++;
+}
