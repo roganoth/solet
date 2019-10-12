@@ -56,6 +56,7 @@ function start() {
     $("#losses").text("Losses: " + losses);
     total = 0;
     $("#actualScore").text(total)
+    $("#wins").text("Wins: " + wins);
 }
 
 $("#gemButton1").click(function () {
