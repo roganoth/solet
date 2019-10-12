@@ -1,6 +1,7 @@
 $(document).ready();
 
 var scoreTotal = [];
+var total = 0
 var wins = 0;
 var losses = 0;
 
@@ -23,7 +24,29 @@ function sum() {
         }
         total += Number(scoreTotal[i]);
     }
+    if (total === goal) {
+        alert("Congratulations! You've won!");
+        confirm("Would you like to try again?");
+        if (confirm) {
+            start();
+        }
+        wins++;
+    }
+    if (total > goal) {
+        alert("Sorry, you've lost.");
+        confirm("Would you like to try again?");
+        scoreTotal=[]
+        console.log(scoreTotal)
+        $("#actualScore").text(scoreTotal);
+        losses++;
+        if (confirm) {
+            start();
+        }
+        console.log(losses)
+    }
     return total;
+
+
 }
 
 
@@ -38,9 +61,11 @@ function start() {
     button3 = Math.floor(Math.random() * 50) + 1;
     button4 = Math.floor(Math.random() * 50) + 1;
     goal = Math.floor(Math.random() * 51) + 50;
-    scoreTotal = [];
-
-}
+    $("#goal").text(goal);
+    $("#wins").append(wins);
+    $("#losses").append(losses);
+    scoreTotal =[]
+    }
 
 $("#gemButton1").click(function () {
     console.log(button1);
@@ -61,21 +86,21 @@ $("#gemButton4").click(function () {
     scoreTotal.push(button4);
     $("#actualScore").text(sum);
 });
+// console.log(total)
+// if (total === goal) {
+//     alert("Congratulations! You've won!");
+//     confirm("Would you like to try again?");
+//     if (confirm) {
+//         start();
+//     }
+//     wins++;
+// }
 
-if (sum === goal) {
-    alert("Congratulations! You've won!");
-    confirm("Would you like to try again?");
-        if (confirm) {
-            start();
-        }
-    wins++;
-}
-
-if (sum > goal) {
-    alert("Sorry, you've lost.");
-    confirm("Would you like to try again?");
-        if (confirm) {
-            start();
-        }
-    losses++;
-}
+// if (total > goal) {
+//     alert("Sorry, you've lost.");
+//     confirm("Would you like to try again?");
+//     if (confirm) {
+//         start();
+//     }
+//     losses++;
+// }
