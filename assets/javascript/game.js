@@ -80,21 +80,3 @@ $("#gemButton4").click(function () {
     $("#actualScore").text(total);
     compare();
 });
-// console.log(total)
-// if (total === goal) {
-//     alert("Congratulations! You've won!");
-//     confirm("Would you like to try again?");
-//     if (confirm) {
-//         start();
-//     }
-//     wins++;
-// }
-
-// if (total > goal) {
-//     alert("Sorry, you've lost.");
-//     confirm("Would you like to try again?");
-//     if (confirm) {
-//         start();
-//     }
-//     losses++;
-// }

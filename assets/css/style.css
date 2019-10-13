@@ -56,8 +56,8 @@ h1 {
 }
 
 .gemImage {
-    height: 150px;
-    width: 150px;
+    height: 100%;
+    width: 100%;
     image-orientation: center;
 }
 
@@ -82,4 +82,29 @@ h1 {
     padding-left: 5px;
     font-size: 50px;
     text-align: center;
+}
+
+@media only screen and (max-width: 640px){
+    header {
+        width: 100%;
+    }
+    #instructions {
+        width: 100%;;
+    }
+    #goal {
+        width: 50%;
+    }
+    #winLoss {
+        width: 50%;
+    }
+    .gemButton {
+        width: 24%;
+        margin: 0;
+    }
+    #score {
+        width: 100%;
+    }
+    #actualScore {
+        width: 100%;
+    }
 }
