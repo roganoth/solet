@@ -9,34 +9,30 @@ var button2 = Math.floor(Math.random() * 10) + 1;
 var button3 = Math.floor(Math.random() * 10) + 1;
 var button4 = Math.floor(Math.random() * 10) + 1;
 var goal = Math.floor(Math.random() * 40) + 1;
-// console.log(button1);
-// console.log(button2);
-// console.log(button3);
-// console.log(button4);
 
 function compare() {
     if (total === goal) {
         alert("Congratulations! You've won!");
-        confirm("Would you like to try again?");
+        var again1 = confirm("Would you like to try again?");
         wins++;
-        if (confirm) {
+        if (again1 == true) {
             start();
         }
         else {
-            // $("#wins").text("Wins: " + wins);
-            // return false;
+            $("#wins").text("Wins: " + wins);
+            return false;
         }
     }
     if (total > goal) {
         alert("Sorry, you've lost.");
-        confirm("Would you like to try again?");
+        var again2 = confirm("Would you like to try again?");
         losses++;
-        if (confirm) {
+        if (again2 == true) {
             start();
         }
         else {
-            // $("#losses").text("Losses: " + losses);
-            // return false;
+            $("#losses").text("Losses: " + losses);
+            return false;
         }
     }
 }
